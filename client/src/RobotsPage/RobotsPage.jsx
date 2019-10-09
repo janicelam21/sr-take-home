@@ -11,6 +11,8 @@ class RobotsPage extends React.Component {
   }
 
   render() {
+    // we can implement the sorting for each title
+    // can also implement deleting a robot
     return (
       <div>
         <div className={styles.titleWrapper}>

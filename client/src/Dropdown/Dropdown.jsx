@@ -27,7 +27,7 @@ class Dropdown extends React.Component {
       <div className = {styles.dropdownWrapper} onClick={this.toggleDropdown}>
         <div>
           {this.state.currCompany.length === 0
-          ? <span className = {styles.companyText}>Company A</span>
+          ? <span className = {styles.companyText}>{this.props.currCompany}</span>
           : <span className = {styles.companyText}>{this.state.currCompany}</span>}
           <FontAwesomeIcon icon="chevron-down" size="lg" transform="right-120" />
         </div>

@@ -15,8 +15,8 @@
 
 .dropdownList {
   position: absolute;
-  margin-left: 40px;
-  margin-top: 70px;
+  left: 40px;
+  top: 60px;
   border-radius: 2px;
   border-top: 1px solid #DCDCDC;
   border-left: 1px solid #DCDCDC;
@@ -32,4 +32,8 @@
   display: flex;
   padding-left: 15px;
   align-items: center;
+}
+
+.dropdownItems:hover {
+  color: #237fa5;
 }

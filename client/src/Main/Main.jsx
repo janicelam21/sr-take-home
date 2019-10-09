@@ -11,7 +11,7 @@ class Main extends React.Component {
     super()
     this.state = {
       fakeData: [],
-      pageHeader: 'Robots',
+      pageHeader: 'Dashboard',
       currCompany: '',
       robotListToRender: [],
     }
@@ -49,7 +49,7 @@ class Main extends React.Component {
             <img src={require("../../../assets/Pepper_Icon.png")} alt="pepperIcon" className = {styles.logo}/>
           </div>
           <div className={styles.remainderNav}>
-            <Dropdown data={this.state.fakeData} changeCurrCompany = {this.changeCurrCompany}/>
+            <Dropdown data={this.state.fakeData} changeCurrCompany = {this.changeCurrCompany} currCompany = {this.state.currCompany}/>
             <ViewOptions changeHeader={this.changeHeader}/>
           </div>
         </nav>
@@ -58,8 +58,8 @@ class Main extends React.Component {
         </header>
         <article className = {styles.mainArticle}>
           {this.state.pageHeader === 'Robots'
-          ? <RobotsPage data = {this.state.fakeData} robotListToRender = {this.state.robotListToRender}/>
-          : <DashboardPage />}
+          ? <RobotsPage robotListToRender = {this.state.robotListToRender}/>
+          : <DashboardPage robotListToRender={this.state.robotListToRender}/>}
         </article>
       </div>
     )

@@ -1,0 +1,34 @@
+.dashboardWrapper {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.headerText {
+  font-size: 18px;
+  margin-bottom: 20px
+
+}
+.eachUpdateWrapper {
+  height: 60px;
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px
+}
+
+.robots, .date {
+  font-size: 12px;
+  color: #BEBEBE;
+}
+
+.date {
+  float: right;
+}
+
+.update {
+  font-size: 14px;
+  margin-top: 8px;
+}
