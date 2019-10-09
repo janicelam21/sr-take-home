@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/janicelam21/sr-take-home#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
     "babel": "^6.23.0",
     "file-loader": "^4.2.0",
     "live-server": "^1.2.1",

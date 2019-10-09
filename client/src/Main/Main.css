@@ -51,6 +51,7 @@ table {
   grid-template-columns: 375px 1fr;
   grid-template-rows: 98px 1fr;
   height: 100vh;
+  font-family: sans-serif;
 }
 
 .pageHeader {
@@ -72,18 +73,15 @@ table {
 
 .topNav {
   grid-area: topnav;
-  background-color: black;
-  position: relative;
+  background-color: #303030;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
   margin-left: 40px;
 }
 
 .remainderNav {
-  background-color: gold;
+  background-color: #F0F0F0;
 }
