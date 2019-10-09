@@ -12,7 +12,8 @@ class ViewOptions extends React.Component {
   }
 
   changeCurrDisplay(currDisplay) {
-    this.setState({currDisplay})
+    this.setState({currDisplay});
+    this.props.changeHeader(currDisplay);
   }
 
   render() {

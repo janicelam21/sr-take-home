@@ -19,6 +19,7 @@ class Dropdown extends React.Component {
 
   setCurrCompany(val) {
     this.setState({currCompany: val})
+    this.props.changeCurrCompany(val)
   }
 
   render() {
