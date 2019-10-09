@@ -10,10 +10,15 @@ class Dropdown extends React.Component {
       showDropdown: false,
     }
     this.toggleDropdown = this.toggleDropdown.bind(this);
+    this.setCurrCompany = this.setCurrCompany.bind(this);
   }
 
   toggleDropdown() {
     this.setState({showDropdown: !this.state.showDropdown})
+  }
+
+  setCurrCompany(val) {
+    this.setState({currCompany: val})
   }
 
   render() {
@@ -27,7 +32,11 @@ class Dropdown extends React.Component {
         </div>
         {this.state.showDropdown
         ? <div className={styles.dropdownList}>
-          {this.props.data.map((each) => <div className={styles.dropdownItems}>{each.companyName}</div>)}
+          {this.props.data.map((each, index) => {
+            return (
+              <div key={index} className = {styles.dropdownItems} onClick={() => {this.setCurrCompany(each.companyName)}}>{each.companyName}</div>
+            )
+          })}
         </div>
         : null}
       </div>
