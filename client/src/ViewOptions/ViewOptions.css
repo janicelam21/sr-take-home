@@ -1,0 +1,27 @@
+.viewOptionsWrapper {
+  height: 150px;
+  border-bottom: 1px solid #DCDCDC;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options, .optionsSelected {
+  height: 48px;
+  width: 340px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.optionsSelected {
+  background-color: #2D667E;
+  color: white;
+}
+
+.text, .icon {
+  margin-left: 20px;
+}

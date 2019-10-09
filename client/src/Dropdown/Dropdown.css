@@ -1,6 +1,6 @@
 .dropdownWrapper {
   height: 84px;
-  border-bottom: 2px solid grey;
+  border-bottom: 1px solid #DCDCDC;
   display: flex;
   justify-content: center;
   cursor: pointer;

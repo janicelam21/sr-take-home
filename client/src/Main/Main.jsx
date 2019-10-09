@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Main.css';
 import Dropdown from '../Dropdown/Dropdown.jsx';
+import ViewOptions from '../ViewOptions/ViewOptions.jsx'
 import fakeData from '../../../assets/fakeData.js';
 
 class Main extends React.Component {
@@ -25,7 +26,7 @@ class Main extends React.Component {
           </div>
           <div className={styles.remainderNav}>
             <Dropdown data={this.state.fakeData}/>
-            {/* <ViewOptions /> */}
+            <ViewOptions />
           </div>
         </nav>
         <header className={styles.pageHeader}>
