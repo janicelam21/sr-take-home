@@ -118,7 +118,7 @@ class Main extends React.Component {
         </article>
         {this.state.showAddRobotForm
         ? <div className = {styles.addForm}>
-            <AddRobotForm showAddRobot = {this.showAddRobot} currCompany = {this.state.currCompany} addRobot = {this.addRobot}/>
+          <AddRobotForm showAddRobot = {this.showAddRobot} currCompany = {this.state.currCompany} addRobot = {this.addRobot}/>
         </div>
         : null}
       </div>
