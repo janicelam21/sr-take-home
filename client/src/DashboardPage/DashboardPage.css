@@ -1,5 +1,5 @@
 .dashboardWrapper {
-  padding-top: 20px;
+  padding-top: 25px;
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -7,10 +7,10 @@
 .headerText {
   font-size: 18px;
   margin-bottom: 20px
-
 }
+
 .eachUpdateWrapper {
-  height: 60px;
+  height: 65px;
   border: 1px solid #D3D3D3;
   border-radius: 5px;
   margin-bottom: 10px;

@@ -29,9 +29,9 @@ class RobotsPage extends React.Component {
             <FontAwesomeIcon icon="sort" size="md" className = {styles.arrowIcon}/>
           </span>
         </div>
-        {this.props.robotListToRender.map((each) => {
+        {this.props.robotListToRender.map((each, index) => {
           return (
-            <div className={styles.robotWrapper}>
+            <div key = {index} className={styles.robotWrapper}>
               <span className={styles.robotIndivName}>{each[0]}</span>
               <span className={styles.robotLocation}>{each[1]}</span>
               <span className={styles.robotID}>{each[2]}</span>

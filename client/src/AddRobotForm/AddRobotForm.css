@@ -45,13 +45,13 @@ input {
 }
 
 .cancelBtn, .addBtn {
-  height: 30px;
+  height: 35px;
   padding-left: 20px;
   padding-right: 20px;
   background-color: #237fa5;
   border-radius: 5px;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
   cursor: pointer;
   outline: none;
   float: right;
@@ -59,8 +59,14 @@ input {
   margin-left: 15px;
 }
 
+.cancelBtn { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;         
+}
+
 .cancelBtn {
   background-color:#F0F0F0;
   color: #237fa5;
-  border: 1.5px solid #237fa5;
+  border: 2px solid #237fa5;
 }
