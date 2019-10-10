@@ -4,6 +4,10 @@
   height: 70px;
 }
 
+.robotWrapper {
+  height: 80px;
+}
+
 .robotName, .robotIndivName {
   padding-left: 20px;
   display: inline-block;

@@ -29,7 +29,7 @@ class Dropdown extends React.Component {
           {this.state.currCompany.length === 0
           ? <span className = {styles.companyText}>{this.props.currCompany}</span>
           : <span className = {styles.companyText}>{this.state.currCompany}</span>}
-          <FontAwesomeIcon icon="chevron-down" size="lg" transform="right-120" />
+          <FontAwesomeIcon icon="chevron-down" size="lg" transform="right-100" />
         </div>
         {this.state.showDropdown
         ? <div className={styles.dropdownList}>

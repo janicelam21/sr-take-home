@@ -6,7 +6,7 @@ class ViewOptions extends React.Component {
   constructor() {
     super() 
     this.state = {
-      currDisplay: 'Dashboard',
+      currDisplay: 'Robots',
     }
     this.changeCurrDisplay = this.changeCurrDisplay.bind(this);
   }

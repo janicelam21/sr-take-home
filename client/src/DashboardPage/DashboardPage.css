@@ -19,6 +19,11 @@
   padding-right: 20px
 }
 
+.eachUpdateWrapper:hover {
+  border: 1px solid #237fa5;
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
 .robots, .date {
   font-size: 12px;
   color: #BEBEBE;

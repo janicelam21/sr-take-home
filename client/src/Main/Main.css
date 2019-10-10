@@ -24,7 +24,8 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -46,25 +47,20 @@ table {
 .main {
   display: grid;
   grid-template-areas: 
-    "nav header"
-    "nav article";
-  grid-template-columns: 375px 1fr;
+    "nav header side"
+    "nav article side";
+  grid-template-columns: 3.75fr 8fr 5.75fr;
   grid-template-rows: 98px 1fr;
   height: 100vh;
   font-family: sans-serif;
 }
 
 .pageHeader {
-  grid-area: header;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  padding-left: 40px;
-  border-bottom: 1px solid #A9A9A9;
+  grid-area: header-start/header-start/header-end/side-end;
 }
 
 .mainNav {
-  grid-area: nav;
+  grid-area: nav-start/nav-start/nav-end/nav-end;
   display: grid;
   grid-template-areas: 
     "topnav"
@@ -73,7 +69,7 @@ table {
 }
 
 .mainArticle {
-  grid-area: article;
+  grid-area: article-start/article-start/article-end/side-end;
 }
 
 .topNav {
@@ -89,4 +85,9 @@ table {
 
 .remainderNav {
   background-color: #F0F0F0;
+}
+
+.addForm {
+  grid-area: side-start/side-start/side-end/side-end;
+  z-index: 1;
 }
