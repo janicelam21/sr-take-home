@@ -10,7 +10,7 @@ import styles from './Main.css';
 
 class Main extends React.Component {
   constructor() {
-    super()
+    super();
     this.state = {
       fakeData: [],
       pageHeader: 'Robots',
