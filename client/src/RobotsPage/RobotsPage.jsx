@@ -35,7 +35,7 @@ class RobotsPage extends React.Component {
               <span className={styles.robotIndivName}>{each[0]}</span>
               <span className={styles.robotLocation}>{each[1]}</span>
               <span className={styles.robotID}>{each[2]}</span>
-              <FontAwesomeIcon icon={["far","trash-alt"]} size="lg" className={styles.trashIcon}/>
+              <FontAwesomeIcon icon={["far","trash-alt"]} size="lg" className={styles.trashIcon} onClick = {() => this.props.deleteRobot(this.props.currCompany, each[0])}/>
             </div>
           )
         })}

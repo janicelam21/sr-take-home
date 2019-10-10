@@ -36,6 +36,7 @@ div > div.robotWrapper:nth-of-type(even) {
   display: inline-block;
   width: 10%;
   color: #237fa5;
+  cursor: pointer;
 }
 
 .arrowIcon {

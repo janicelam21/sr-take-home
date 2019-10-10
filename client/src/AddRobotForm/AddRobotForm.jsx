@@ -32,21 +32,20 @@ class AddRobotForm extends React.Component {
           <FontAwesomeIcon icon="times" size="1x" onClick = {this.props.showAddRobot} className = {styles.xIcon}/>
         </div>
         <div className = {styles.inputWrapper}>
-          <form>
+          <form className = {styles.form}>
             <label className = {styles.label}>ROBOT NAME</label>
             <input type="text" placeholder="i.e. Pepper One" onChange = {(e) => this.onUpdate(e, 'name')}/>
           </form>
-          <form>
+          <form className = {styles.form}>
             <label className = {styles.label}>LOCATION</label>
             <input type="text" placeholder="i.e. San Francisco" onChange = {(e) => this.onUpdate(e, 'location')}/>
           </form>
-          <form>
+          <form className = {styles.form}>
             <label className = {styles.label}>ROBOT ID</label>
             <input type="text" placeholder="i.e. 1234567654321" onChange = {(e) => this.onUpdate(e, 'robotID')}/>
           </form>
           <button className = {styles.addBtn} onClick = {this.sendInfo}>Add Robot</button>
-          <button className = {styles.cancelBtn} onClick = {this.props.showAddRobot}>Cancel</button>
-          
+          <button className = {styles.cancelBtn} onClick = {this.props.showAddRobot}>Cancel</button>     
         </div>
       </div>
     )

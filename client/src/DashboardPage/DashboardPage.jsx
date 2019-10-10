@@ -7,14 +7,16 @@ class DashboardPage extends React.Component {
     return (
       <div className = {styles.dashboardWrapper}>
         <div className = {styles.headerText}>Recent Updates</div>
-        {this.props.robotListToRender.map((each, index) => {
+        {this.props.dashboardListToRender.slice(0).reverse().map((each, index) => {
           return (
             <div key = {index} className = {styles.eachUpdateWrapper}>
               <div>
                 <span className = {styles.robots}>ROBOTS</span>
-                <span className = {styles.date}>{each[3]}</span>
+                <span className = {styles.date}>{each[2]}</span>
               </div>
-              <div className = {styles.update}>{each[0]} Added</div>
+              {each[0] === "Add"
+              ? <div className = {styles.update}>{each[1]} Added</div>
+              : <div className = {styles.update}>{each[1]} Deleted</div>}
             </div>
           )
         })}
