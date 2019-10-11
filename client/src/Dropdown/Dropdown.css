@@ -1,3 +1,9 @@
+.dropdownWrapper { 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;         
+}
+
 .dropdownWrapper {
   height: 84px;
   border-bottom: 1px solid #DCDCDC;
