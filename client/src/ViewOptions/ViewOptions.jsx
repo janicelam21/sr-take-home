@@ -2,6 +2,7 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styles from './ViewOptions.css';
+import RobotsPage from '../RobotsPage/RobotsPage';
 
 class ViewOptions extends React.Component {
   constructor(props) {

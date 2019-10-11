@@ -56,7 +56,11 @@ class Main extends React.Component {
         break;
       }
     }
-    this.setState({ currCompany, robotListToRender, dashboardListToRender });
+    this.setState({
+      currCompany,
+      robotListToRender,
+      dashboardListToRender,
+    });
   }
 
   showAddRobot() {
