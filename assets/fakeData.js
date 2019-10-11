@@ -3,8 +3,8 @@ module.exports = [
     companyName: 'Company One',
     currentRobots: [
       ['Robot AA', 'San Francisco', 12345678912],
-      ['Robot BA', 'San Francisco', 12345678912],
-      ['Robot CA', 'San Francisco', 12345678912],
+      ['Robot BA', 'Boston', 12345678912],
+      ['Robot CA', 'Boston', 12345678912],
       ['Robot DA', 'San Francisco', 12345678912],
     ],
     dashboardUpdates: [
@@ -48,9 +48,9 @@ module.exports = [
     companyName: 'Company Four',
     currentRobots: [
       ['Robot AC', 'San Francisco', 12345678912],
-      ['Robot BC', 'San Francisco', 12345678912],
+      ['Robot BC', 'Boston', 12345678912],
       ['Robot CC', 'San Francisco', 12345678912],
-      ['Robot DC', 'San Francisco', 12345678912],
+      ['Robot DC', 'Boston', 12345678912],
       ['Robot EC', 'San Francisco', 12345678912],
     ],
     dashboardUpdates: [

@@ -7,34 +7,41 @@ class RobotsPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showDeleteConfirmForm: false,
-      companyDeleteFrom: '',
-      robotDelete: '',
+      showDropdown: false,
     };
+    this.toggleDropdown = this.toggleDropdown.bind(this);
   }
 
-  toggleDelete(company, robot) {
-    this.setState(state => ({ showDeleteConfirmForm: !state.showDeleteConfirmForm }));
-    this.setState({
-      companyDeleteFrom: company,
-      robotDelete: robot,
-    });
+  toggleDropdown() {
+    this.setState(state => ({ showDropdown: !state.showDropdown }));
   }
 
   render() {
-    // we can implement the sorting for each title
     return (
       <div>
         <div className={styles.titleWrapper}>
-          <span className={styles.robotName} onClick={() => this.props.sortRobot('name')}>
+          <span className={styles.robotName}>
             NAME
             <FontAwesomeIcon icon="sort" size="1x" className={styles.arrowIcon} />
           </span>
-          <span className={styles.robotLocation} onClick={() => this.props.sortRobot('location')}>
-            LOCATION
-            <FontAwesomeIcon icon="sort" size="1x" className={styles.arrowIcon} />
+          <span className={styles.robotLocation} onClick={this.toggleDropdown}>
+            <span>
+              LOCATION
+              <FontAwesomeIcon icon="sort" size="1x" className={styles.arrowIcon} />
+            </span>
+            {this.state.showDropdown
+              ? (
+                <div className={styles.locationOptions}>
+                  {this.props.predefinedLocations.map(each => (
+                    <div className={styles.locations} onClick={() => this.props.sortRobot(each)}>{each}</div>
+                  ))}
+                </div>
+              )
+              : null
+            }
           </span>
-          <span className={styles.robotID} onClick={() => this.props.sortRobot('id')}>
+
+          <span className={styles.robotID}>
             ROBOT ID
             <FontAwesomeIcon icon="sort" size="1x" className={styles.arrowIcon} />
           </span>
@@ -44,16 +51,9 @@ class RobotsPage extends React.Component {
             <span className={styles.robotIndivName}>{each[0]}</span>
             <span className={styles.robotLocation}>{each[1]}</span>
             <span className={styles.robotID}>{each[2]}</span>
-            <FontAwesomeIcon icon={['far', 'trash-alt']} size="lg" className={styles.trashIcon} onClick={() => this.toggleDelete(this.props.currCompany, each[0])} />
+            <FontAwesomeIcon icon={['far', 'trash-alt']} size="lg" className={styles.trashIcon} onClick={() => this.props.showDeleteForm(this.props.currCompany, each[0])} />
           </div>
         ))}
-        {this.state.showDeleteConfirmForm
-          ? (
-            <div className={styles.deleteForm}>
-              <button onClick={() => this.props.deleteForm(this.state.companyDeleteFrom, this.state.robotDelete)} />
-            </div>
-          )
-          : null}
       </div>
     );
   }
@@ -61,9 +61,10 @@ class RobotsPage extends React.Component {
 
 RobotsPage.propTypes = {
   robotListToRender: PropTypes.arrayOf(PropTypes.array).isRequired,
-  deleteForm: PropTypes.func.isRequired,
+  showDeleteForm: PropTypes.func.isRequired,
   currCompany: PropTypes.string.isRequired,
   sortRobot: PropTypes.func.isRequired,
+  predefinedLocations: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 export default RobotsPage;

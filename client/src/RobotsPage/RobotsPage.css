@@ -9,27 +9,28 @@
 }
 
 .robotName, .robotIndivName {
-  padding-left: 20px;
+  padding-left: 40px;
   display: inline-block;
-  width: 30%;
+  width: 28%;
 }
 
 .robotIndivName {
   color: #237fa5;
 }
 
-div > div.robotWrapper:nth-of-type(even) {
+div > .robotWrapper:nth-of-type(even) {
   background: #F8F8F8;
 }
 
 .robotLocation {
   display: inline-block;
-  width: 30%
+  width: 28%;
+  cursor: pointer;
 }
 
 .robotID {
   display: inline-block;
-  width: 30%;
+  width: 34%;
 }
 
 .trashIcon {
@@ -43,12 +44,25 @@ div > div.robotWrapper:nth-of-type(even) {
   margin-left: 5px;
 }
 
-.deleteForm {
+.locationOptions {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: blue;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 2px;
+  border-top: 1px solid #DCDCDC;
+  border-left: 1px solid #DCDCDC;
+  border-right: 1px solid #DCDCDC;
 }
+
+.locations {
+  padding: 10px 10px 10px 10px;
+  border-radius: 2px;
+  border-bottom: 1px solid #DCDCDC;
+}
+
+.locations:hover {
+  color: #237fa5;
+}
+
+
 
