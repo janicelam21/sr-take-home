@@ -21,5 +21,14 @@ module.exports = {
       'react',
     ],
     rules: {
+      "import/extensions" : "never",
+      "react/destructuring-assignment": "off",
+      "max-len" : "off",
+      "react/no-array-index-key": "off",
+      "jsx-a11y/label-has-associated-control": "off",
+      "jsx-a11y/label-has-for": "off",
+      "jsx-a11y/click-events-have-key-events": "off",
+      "jsx-a11y/no-static-element-interactions": "off",
+      "global-require": "off",
     },
   };

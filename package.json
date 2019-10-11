@@ -26,6 +26,7 @@
     "file-loader": "^4.2.0",
     "live-server": "^1.2.1",
     "path": "^0.12.7",
+    "prop-types": "^15.7.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "webpack-dev-server": "^3.8.0"

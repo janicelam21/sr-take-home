@@ -43,3 +43,12 @@ div > div.robotWrapper:nth-of-type(even) {
   margin-left: 5px;
 }
 
+.deleteForm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: blue;
+}
+
