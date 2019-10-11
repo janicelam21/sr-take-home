@@ -27,7 +27,7 @@ class AddRobotForm extends React.Component {
 
   render() {
     return (
-      <div className={styles.robotFormWrapper}>
+      <div className={styles.robotFormWrapper} key={this.state.currCompany}>
         <div className={styles.title}>
           Add New Robot
           <FontAwesomeIcon icon="times" size="1x" onClick={this.props.showAddRobot} className={styles.xIcon} />

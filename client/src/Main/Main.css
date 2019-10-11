@@ -46,14 +46,10 @@ table {
 /* personalized CSS */
 .main {
   display: grid;
-  grid-template-areas: 
-    "nav header header header side"
-    "nav article article article side"
-    "nav article popup article side"
-    "nav article article article side";
   grid-template-columns: 3.75fr 2fr 5.5fr 0.5fr 5.75fr;
   grid-template-rows: 98px 1.3fr 0.6fr 1.5fr;
   height: 100vh;
+  width: 100%;
   font-family: sans-serif;
 }
 
@@ -96,6 +92,7 @@ table {
   grid-column: 5/ span 1;
   grid-row: 1/span 4;
   z-index: 1;
+  position: relative;
 }
 
 .deleteForm {
@@ -103,3 +100,4 @@ table {
   grid-row: 3;
   z-index: 1;
 }
+

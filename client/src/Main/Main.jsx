@@ -151,7 +151,7 @@ class Main extends React.Component {
         {this.state.showAddRobotForm
           ? (
             <div className={styles.addForm}>
-              <AddRobotForm showAddRobot={this.showAddRobot} currCompany={this.state.currCompany} addRobot={this.addRobot} />
+              <AddRobotForm key={this.state.currCompany} showAddRobot={this.showAddRobot} currCompany={this.state.currCompany} addRobot={this.addRobot} />
             </div>
           )
           : null}
