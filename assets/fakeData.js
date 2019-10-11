@@ -1,4 +1,4 @@
-module.exports = [
+const robotInfo = [
   {
     companyName: 'Company One',
     currentRobots: [
@@ -79,3 +79,10 @@ module.exports = [
     ],
   },
 ];
+
+const locations = ['San Francisco', 'New York', 'Boston', 'Chicago'];
+
+module.exports = {
+  robotInfo,
+  locations,
+};

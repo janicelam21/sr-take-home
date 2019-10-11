@@ -6,7 +6,7 @@ import RobotsPage from '../RobotsPage/RobotsPage.jsx';
 import DashboardPage from '../DashboardPage/DashboardPage.jsx';
 import AddRobotForm from '../AddRobotForm/AddRobotForm.jsx';
 import ConfirmDelete from '../ConfirmDelete/ConfirmDelete.jsx';
-import fakeData from '../../../assets/fakeData.js';
+import { robotInfo, locations } from '../../../assets/fakeData.js';
 import styles from './Main.css';
 
 class Main extends React.Component {
@@ -14,7 +14,7 @@ class Main extends React.Component {
     super();
     this.state = {
       fakeData: [],
-      predefinedLocations: ['San Francisco', 'New York', 'Boston', 'Chicago'],
+      predefinedLocations: [],
       pageHeader: 'Robots',
       currCompany: '',
       robotListToRender: [],
@@ -35,10 +35,11 @@ class Main extends React.Component {
 
   componentDidMount() {
     this.setState({
-      fakeData,
-      currCompany: fakeData[0].companyName,
-      robotListToRender: fakeData[0].currentRobots,
-      dashboardListToRender: fakeData[0].dashboardUpdates,
+      fakeData: robotInfo,
+      predefinedLocations: locations,
+      currCompany: robotInfo[0].companyName,
+      robotListToRender: robotInfo[0].currentRobots,
+      dashboardListToRender: robotInfo[0].dashboardUpdates,
     });
   }
 
